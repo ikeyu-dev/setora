@@ -1,0 +1,23 @@
+openapi: 3.0.3
+info:
+    title: Setora API
+    version: "1.0.0"
+servers:
+    - url: http://127.0.0.1:8180
+paths:
+    /health:
+        get:
+            summary: ヘルスチェック
+            responses:
+                "200":
+                    description: サーバー稼働中
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                required:
+                                    - status
+                                properties:
+                                    status:
+                                        type: string
+                                        example: ok

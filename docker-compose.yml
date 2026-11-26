@@ -1,0 +1,9 @@
+services:
+    setora-swagger-ui:
+        image: swaggerapi/swagger-ui
+        ports:
+            - "127.0.0.1:8181:8080"
+        volumes:
+            - ./openapi.yml:/data/openapi.yml:ro
+        environment:
+            SWAGGER_JSON: /data/openapi.yml
